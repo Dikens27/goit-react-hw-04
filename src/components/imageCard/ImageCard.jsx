@@ -11,8 +11,13 @@ export default function ImageCard({
   },
 }) {
   return (
-    <div>
-      <img src={small} alt={description} onClick={() => onOpen(imageCard)} />
+    <div className={css.container}>
+      <img
+        src={small}
+        alt={description}
+        onClick={() => onOpen(imageCard)}
+        className={css.image}
+      />
       <div className={css.content}>
         <div className={css.title}>
           <p className={css.titleItem}>

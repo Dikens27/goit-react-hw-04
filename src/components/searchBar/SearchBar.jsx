@@ -1,4 +1,4 @@
-// import css from './SearchBar.module.css';
+import css from './SearchBar.module.css';
 import { IoIosSearch } from 'react-icons/io';
 import { Formik, Form, Field } from 'formik';
 import * as yup from 'yup';
@@ -18,23 +18,24 @@ export default function SearchBar({ onSearch }) {
   };
 
   return (
-    <header>
+    <header className={css.header}>
       <Formik
         initialValues={{ query: '' }}
         onSubmit={handleSubmit}
         validationSchema={searchSchema}
       >
-        <Form>
+        <Form className={css.form}>
+          <button className={css.button} type="submit">
+            <IoIosSearch />
+          </button>
           <Field
+            className={css.input}
             type="text"
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos"
             name="query"
           />
-          <button type="submit">
-            <IoIosSearch />
-          </button>
         </Form>
       </Formik>
     </header>
