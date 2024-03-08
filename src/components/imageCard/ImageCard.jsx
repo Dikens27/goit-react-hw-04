@@ -2,7 +2,7 @@ import css from './ImageCard.module.css';
 
 export default function ImageCard({
   onOpen,
-  imageCard,
+  data,
   data: {
     likes,
     description,
@@ -15,7 +15,7 @@ export default function ImageCard({
       <img
         src={small}
         alt={description}
-        onClick={() => onOpen(imageCard)}
+        onClick={() => onOpen(data)}
         className={css.image}
       />
       <div className={css.content}>

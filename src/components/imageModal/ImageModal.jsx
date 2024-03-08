@@ -18,7 +18,6 @@ export default function ImageModal({ isOpen, onClose, content }) {
             src={content.urls.regular}
             alt={content.description}
           />
-          <p>Author: {content.user.last_name}</p>
         </>
       )}
     </Modal>
